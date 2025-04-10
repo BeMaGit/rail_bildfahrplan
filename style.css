@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#controls {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+}
+
+#controls button, #controls label, #controls span {
+    margin: 0 5px;
+}
+
+#chartContainer, #trackMapContainer {
+    border: 1px solid black;
+    background-color: #fff;
+    margin-bottom: 20px; /* Add space between charts */
+    padding: 10px;
+     /* Optional: Makes it easier to see the SVG boundaries */
+}
+
+/* --- Bildfahrplan Styles --- */
+.grid-line {
+    stroke: #eee;
+    stroke-width: 1;
+}
+
+.station-line {
+    stroke: #aaa;
+    stroke-width: 1;
+}
+
+.axis-label {
+    font-size: 10px;
+    fill: #555;
+    text-anchor: middle; /* Center time labels */
+}
+
+.station-label {
+    font-size: 12px;
+    fill: #333;
+    text-anchor: end; /* Align station labels to the right */
+}
+
+.train-path {
+    stroke-width: 2;
+    fill: none;
+    opacity: 0.8;
+}
+
+#timeIndicator {
+    stroke: red;
+    stroke-width: 1.5;
+    stroke-dasharray: 4 2; /* Dashed line for time */
+}
+
+
+/* --- NEW: Track Map Styles --- */
+#trackMapContainer h2 {
+    margin-bottom: 15px;
+}
+
+.track-line {
+    stroke: #333;
+    stroke-width: 3;
+}
+
+.track-station-marker {
+    fill: #555;
+}
+
+.track-station-label {
+    font-size: 11px;
+    text-anchor: middle;
+    fill: #333;
+}
+
+.train-icon {
+    stroke: black;
+    stroke-width: 0.5;
+    /* transition: cx 0.1s linear; Basic animation - relies on interval speed */
+}
+
+.train-icon-label {
+     font-size: 9px;
+     fill: white;
+     text-anchor: middle;
+     dominant-baseline: central; /* Better vertical centering */
+     pointer-events: none; /* Allow clicking through text */
+}
