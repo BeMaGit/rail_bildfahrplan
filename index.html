@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildfahrplan & Track Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bildfahrplan & Track Simulation</h1>
+
+    <div id="controls">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+        <button id="resetBtn">Reset</button>
+        <label for="speedSlider">Speed:</label>
+        <input type="range" id="speedSlider" min="1" max="10" value="1">
+        <span>Current Time: <span id="currentTimeDisplay">00:00</span></span>
+    </div>
+
+    <div id="chartContainer">
+        <h2>Bildfahrplan (Time vs. Distance)</h2>
+        <svg id="bildfahrplan" width="1000" height="600" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+    </div>
+
+    <div id="trackMapContainer">
+        <h2>Live Track Map</h2>
+        <svg id="trackMap" width="1000" height="150" xmlns="http://www.w3.org/2000/svg">
+            </svg>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
